@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Passphrase generator</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<ul>
+			<li><a href="password.html">Password generator</a></li>
+			<li><a href="passphrase.html">Passphrase generator</a></li>
+			<li><a href="strength.html">Password strength test</a></li>
+			<li><a href="info.html">Info</a></li>
+		</ul>
+		<hr style="width: 33%">
+		<h2>Passphrase generator</h2>
+		<span id="phrase" style="display: none"></span>
+		<p id="getEntropy" style="display: none">Password Entropy is: <span id="entropy"></span></p>
+		<button id="clipboardbtn" style="display: none" onclick="copyToClipboard()">Copy to clipboard</button>
+		<div class="slidecontainer">
+			<p>Passphase Length: <span id="phraseLength"></span></p>
+			<input type="range" min="1" max="10" value="4" class="slider" id="phraseSlider">
+		</div>
+		<button onclick="onGenerateClick()">Generate passphrase</button>
+		<p>The following table shows the strength of a password based on their entropy</p>
+		<table>
+			<tr>
+				<th>Strength</th>			
+				<th>Entropy range</th>
+			</tr>
+			<tr>
+				<td style="color: red">Very weak</td>
+				<td>0 - 30</td>
+			</tr>
+			<tr>
+				<td style="color: lightsalmon">Weak</td>
+				<td>31 - 64</td>
+			</tr>
+			<tr>
+				<td style="color: yellow">Moderate</td>
+				<td>65 - 85</td>
+			</tr>
+			<tr>
+				<td style="color: lightgreen">Strong</td>
+				<td>86 - 128</td>
+			</tr>
+			<tr>
+				<td style="color: green">Very Strong</td>
+				<td>129 and above</td>
+			</tr>
+		</table>
+		<hr style="width: 33%">
+		<p>This website doesn't collect your passwords</p>
+		<p>The source code is avaliable in <a href="https://github.com/f-alotaibi/passgen">Github</a> or you can download it from <a href="https://github.com/f-alotaibi/passgen/archive/refs/heads/main.zip">here</a></p>
+		<p>Made by Faleh Alotaibi <a href="https://github.com/f-alotaibi">Github</a></p>
+		<script src="js/passphrase.js"></script>
+	</body>
+</html>
